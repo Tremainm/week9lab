@@ -1,6 +1,6 @@
 package ie.atu;
 
-java.util.Scanner;
+
 
 public class Person {
     private String name;
@@ -9,9 +9,15 @@ public class Person {
 
     public Person()
     {
-        name = "John";
-        address = "123 main street";
-        number = "0861234567";
+        this.name = "";
+        this.address = "";
+        this.number = "";
+    }
+
+    public Person(String name, String address, String number) {
+        this.name = name;
+        this.address = address;
+        this.number = number;
     }
 
     public String getName() {
@@ -36,5 +42,14 @@ public class Person {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", number='" + number + '\'' +
+                '}';
     }
 }
